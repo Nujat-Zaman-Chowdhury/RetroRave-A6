@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro-Forum-A6</title>
+    <!-- google-font links -->
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <!-- daisy and tailwind cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- remix-icon link -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'gradient':'linear-gradient(90deg, #797DFC, #797DFC00)',
+              }
+            }
+          }
+        }
+      </script>
+    <style>
+        .custom-footer 
+        {
+        background-image: linear-gradient(180deg, rgba(18, 19, 45, 0.05) 0%, rgba(18, 19, 45, 0.00) 100%);
+        }
+        .font-mulish{
+            font-family: "Mulish", sans-serif;
+        }
+        .font-inter{
+            font-family: "Inter", sans-serif;
+        }
+    </style>
+</head>
+<body class="p-4 lg:p-0">
+    <header class="container mx-auto mt-10">
+        <!-- navbar -->
+        <nav class="font-mulish">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden pl-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <button class="rounded-full h-[56px] w-[56px] bg-[#12132D08]"><i class="ri-home-2-line"></i></button>
+                        <button class="rounded-full h-[56px] w-[56px] bg-[#12132D08]"><i class="ri-pencil-line"></i></button>
+                        <button class="rounded-full h-[56px] w-[56px] bg-[#12132D08]"><i class="ri-user-add-line"></i></button>
+                        <button class="rounded-full h-[56px] w-[56px] bg-[#12132D08]"><i class="ri-flag-line"></i></button>
+                        <button class="btn rounded-full bg-[#797DFC] text-white text-xl font-bold">Sign In</button>
+                    </ul>
+                  </div>
+                  <a class="btn btn-ghost text-4xl font-extrabold">RetroRave</a>
+                </div>
+                
+                <div class="navbar-end">
+                  <div class="space-x-3 hidden lg:flex">
+                    <button class="rounded-full h-[56px] w-[56px] bg-[#12132D08]"><i class="ri-home-2-line"></i></button>
+                    <button class="rounded-full h-[56px] w-[56px] bg-[#12132D08]"><i class="ri-pencil-line"></i></button>
+                    <button class="rounded-full h-[56px] w-[56px] bg-[#12132D08]"><i class="ri-user-add-line"></i></button>
+                    <button class="rounded-full h-[56px] w-[56px] bg-[#12132D08]"><i class="ri-flag-line"></i></button>
+                    <button class="btn rounded-full bg-[#797DFC] text-white text-xl font-bold">Sign In</button>
+                  </div>
+                </div>
+              </div>
+        </nav>
+
+        <!-- banner section -->
+        <div class="bg-[#12132D] rounded-[32px] lg:w-[1170px] lg:h-[75vh] mx-auto mt-7 lg:mt-12 bg-[url(./images/bgbanner.png)]  bg-no-repeat bg-cover overflow-hidden">
+            <div class="flex flex-col lg:flex-row lg:justify-center lg:items-center  my-5 lg:my-20 mx-5 lg:mx-24 gap-7 lg:gap-28 overflow-hidden">
+            <!-- banner left -->
+            <div class="space-y-4 lg:space-y-8 lg:flex-1">
+                <h2 class="text-white text-4xl lg:text-6xl font-extrabold leading-10">Welcome to the <span class="text-gradient">ReTroRave</span> Forum</h2>
+                <p class="text-[#FFFFFFCC] mb-8 w-2/3 text-xl font-medium">Unlock your potential, embrace change, and seize every opportunity.</p>
+                <div class="bg-white rounded-full flex items-center justify-between  lg:w-[400px] lg:h-[56px] px-3 lg:px-5 py-3 lg:py-4">
+                    <input class="bg-white  text-[#03071280]" type="search" name="" id="search-box" placeholder="Search here anything">
+                    <button id="search-btn" class="btn bg-[#797DFC] rounded-full text-white h-full">Search</button>
+                </div>
+            </div>
+            <!-- banner right -->
+            <div class="bg-white rounded-[32px] p-6 lg:p-12 space-y-6">
+                <div class="flex justify-between items-center gap-8 w-full text-[#12132DCC]">
+                    <h5 class="font-medium lg:text-2xl">Registered Users</h5>
+                    <p class="font-medium lg:text-2xl">01</p>
+                </div>
+                <div class="flex justify-between items-center gap-8 w-full text-[#12132DCC]">
+                    <h5 class="font-medium lg:text-2xl">Forum</h5>
+                    <p class="font-medium lg:text-2xl">01</p>
+                </div>
+                <div class="flex justify-between items-center gap-8 w-full text-[#12132DCC]">
+                    <h5 class="font-medium lg:text-2xl">Topics</h5>
+                    <p class="font-medium lg:text-2xl">01</p>
+                </div>
+                <div class="flex justify-between items-center gap-8 w-full text-[#12132DCC]">
+                    <h5 class="font-medium lg:text-2xl">Replies</h5>
+                    <p class="font-medium lg:text-2xl">01</p>
+                </div>
+                
+            </div>
+            </div>
+
+            
+        </div>
+    </header>
+    <main class="my-20 container mx-auto">
+        <!-- let's discuss section -->
+        <section class="py-5 lg:py-10">
+            <div class="text-center space-y-6">
+                <h2 class="font-mulish text-4xl font-extrabold">Let’s Discuss</h2>
+                <p class="lg:w-[691px] mx-auto text-[#12132D99] text-lg">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+            </div>
+
+            <!-- bottom part -->
+            
+
+
+            <!-- join our forum -->
+            <div class="bg-[#12132D] rounded-[32px] lg:w-[1170px] lg:h-[65vh] mx-auto mt-7 lg:mt-12 p-5">
+            <div class="flex flex-col lg:flex-row lg:justify-center lg:items-center h-full lg:mx-24 gap-7 lg:gap-20 overflow-hidden">
+            <!--  left -->
+            <div class="space-y-4 lg:space-y-8 lg:flex-1">
+                <h2 class="text-white text-4xl lg:text-4xl font-extrabold leading-10">Join Our Forum</h2>
+                <p class="text-[#FFFFFFCC] mb-8 w-full text-xl font-medium">Experience the ease of running unit tests and instantly viewing results within the application itself</p>
+               <button id="search-btn" class="btn bg-[#797DFC] rounded-full text-white h-full border-0">Registered Now</button>
+            </div>
+            <!--  right -->
+            <div class="">
+                <img src="./images/joinforum.png" alt="">
+            </div>
+        </div>
+        </div>
+        </section>
+
+        <!-- latest post section -->
+        <section class="py-5 lg:py-10  font-mulish">
+            <div class="text-center space-y-6">
+                <h2 class="text-4xl font-extrabold">Latest Posts</h2>
+                <p class="lg:w-[691px] mx-auto text-[#12132D99] text-lg">Celebrate seamless unit testing with in-app execution and immediate result visualization through integrated testing features.</p>
+            </div>
+            <div id="post-container" class="grid grid-cols-1 lg:grid-cols-3 mt-12">
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body space-y-2">
+                      <div class="flex items-center gap-4">
+                        <img src="./images/calender-icon.jpg" alt="">
+                        <p>29 January 2024</p>
+                      </div>
+                      <h4 class="text-[#12132D] font-bold">What will a mars habitat force that impact in our daily life!!!</h4>
+                      <p class="text-[#12132D99]">Yes, you can run unit tests and view the results directly within the app. </p>
+                      <div class="flex items-center gap-4">
+                        <img src="./images/Ellipse 1.jpg" alt="">
+                        <div>
+                            <h5 class="text-[#12132D] font-semibold">Cameron Williamson</h5>
+                            <p class="#12132D99">Unknown</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="mt-5 lg:mt-10 custom-footer py-20">
+        <div class="text-center space-y-7 container mx-auto font-mulish">
+           <h4 class="text-4xl font-extrabold">RetroRave</h4> 
+           <p class="lg:w-[691px] mx-auto text-[#12132D99] text-base">Thank you for visiting our website! Stay connected with us on social media for the latest updates and promotions.</p>
+           <div class="space-x-4 flex justify-center items-center">
+            <i class="ri-twitter-fill"></i>
+            <i class="ri-facebook-fill"></i>
+            <i class="ri-instagram-line"></i>
+            <i class="ri-github-fill"></i>
+           </div>
+           <hr class="w-[1170px] mx-auto">
+           <p>2024, All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- <script src="./Js/index.js"></script> -->
+</body>
+</html>
